@@ -53,5 +53,11 @@ export class ApiService {
   viewStatus=(data:any)=>{
     return this.http.post("http://localhost:8080/viewleavesbyempid",data)
   }
+  loginSec=(data:any)=>{
+    return this.http.post("http://localhost:8080/loginsecurity",data)
+  }
+  addcheckIn=(data:any)=>{
+    return this.http.post("http://localhost:8080/addlog",data)
+  }
   }
 
