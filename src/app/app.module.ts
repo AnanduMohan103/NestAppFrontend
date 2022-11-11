@@ -23,6 +23,9 @@ import { EmpnavbarComponent } from './empnavbar/empnavbar.component';
 import { LeaveapplyComponent } from './leaveapply/leaveapply.component';
 import { ViewallleaveComponent } from './viewallleave/viewallleave.component';
 import { LeavestatusComponent } from './leavestatus/leavestatus.component';
+import { SecdashComponent } from './secdash/secdash.component';
+import { SecnavbarComponent } from './secnavbar/secnavbar.component';
+import { CheckinComponent } from './checkin/checkin.component';
 
 const appRoutes:Routes=[
   {
@@ -72,6 +75,12 @@ const appRoutes:Routes=[
   },
   {
     path:"empstatus",component:LeavestatusComponent
+  },
+  {
+    path:"secdash",component:SecdashComponent
+  },
+  {
+    path:"in",component:CheckinComponent
   }
 ]
 @NgModule({
@@ -93,7 +102,10 @@ const appRoutes:Routes=[
     EmpnavbarComponent,
     LeaveapplyComponent,
     ViewallleaveComponent,
-    LeavestatusComponent
+    LeavestatusComponent,
+    SecdashComponent,
+    SecnavbarComponent,
+    CheckinComponent
     
     
   ],
