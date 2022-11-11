@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Emp-Code</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">DOB</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">DOJ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of empData">
+                    <td>{{i.id}}</td>
+                    <td>{{i.empcode}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.address}}</td>
+                    <td>{{i.email}}</td>
+                    <td>{{i.dob}}</td>
+                    <td>{{i.phone}}</td>
+                    <td>{{i.username}}</td>
+                    <td>{{i.password}}</td>
+                    <td>{{i.jod}}</td>
+                    <td><button class="btn btn-danger"(click)="deleteEmp(i.empcode)">Delete</button></td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
