@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Security Code</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Password</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of secData">
+                    <td>{{i.id}}</td>
+                    <td>{{i.sCode}}</td>
+                    <td>{{i.sName}}</td>
+                    <td>{{i.sPhone}}</td>
+                    <td>{{i.sDate}}</td>
+                    <td>{{i.sUsername}}</td>
+                    <td>{{i.sPassword}}</td>
+                    <td><button class="btn btn-danger"(click)="deleteSec(i.sCode)">Delete</button></td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,65 @@
+<app-adminnavbar></app-adminnavbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-4">
+                <table class="table table-striped table-info">
+                    <thead>
+                      <tr >
+                        
+                        <th scope="col">Id</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Leave Date</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Employ Id</th>
+                        <th scope="col">Applied date</th>
+                        <th scope="col">Status</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let i of leaveData" >
+                        <td>{{i.id}}</td>
+                        <td>{{i.discrip}}</td>
+                        <td>{{i.leave_date}}</td>
+                        <td>{{i.type}}</td>
+                        <td>{{i.name}}</td>
+                        <td>{{i.empcode}}</td>
+                        <td>{{i.apply_date}}</td>
+                        
+
+                        <td >
+                            <span *ngIf="i.status==0">
+                                <select name="status" id="" class="form-control" [(ngModel)]="status" >
+                                     
+                                    <option  value="1">***Approve***</option>
+                                    <option  value="-1">!!!Deny!!!</option>
+                                    <option  value="0">...Pending...</option>
+                                    
+                                </select> 
+                                <br>
+                                <button class="btn btn-success btn-sm" (click)="updateStatus(i.id)">Update</button>                                  
+                                </span>
+                                <span *ngIf="i.status==1">
+                                    ***Approved***
+                                </span>
+                                <span *ngIf="i.status==-1">
+                                    !!!Denied!!!
+                                </span>
+                                <span *ngIf="i.status==0">
+                                    ...Pending...
+                                </span>
+                          
+                              
+                        </td>
+                        
+                        
+                     
+                     
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+</div>
